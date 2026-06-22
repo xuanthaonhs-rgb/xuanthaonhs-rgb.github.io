@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -18,12 +19,14 @@ body{
     color:#7d5063;
 }
 
+/* CONTAINER */
 .container{
     max-width:1000px;
     margin:auto;
     padding:20px;
 }
 
+/* HEADER */
 .header{
     background:white;
     text-align:center;
@@ -52,6 +55,7 @@ h1{
     font-size:18px;
 }
 
+/* BUTTON */
 .candy-btn{
     margin-top:15px;
     padding:12px 25px;
@@ -67,6 +71,7 @@ h1{
     background:#ff69a6;
 }
 
+/* SECTION */
 .section{
     background:white;
     margin-top:25px;
@@ -77,13 +82,15 @@ h1{
 
 .section h2{
     color:#ff69a6;
+    margin-bottom:15px;
 }
 
+/* CARD */
 .card{
     display:flex;
     gap:20px;
-    align-items:center;
     flex-wrap:wrap;
+    align-items:center;
     margin-top:15px;
 }
 
@@ -107,7 +114,23 @@ h1{
     pointer-events:none;
 }
 
+/* CỜ RƠI */
+.flag{
+    position:fixed;
+    top:-40px;
+    font-size:28px;
+    animation:fallFlag 4s linear forwards;
+    pointer-events:none;
+}
+
 @keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes fallFlag{
     to{
         transform:translateY(110vh) rotate(360deg);
         opacity:0;
@@ -131,7 +154,7 @@ h1{
     <div class="header">
         <img src="avata.jpg" class="avatar">
         <h1>Nguyễn An Nhiên</h1>
-        <p class="subtitle">12 tuổi 💖 | Thế giới kẹo ngọt dễ thương</p>
+        <p class="subtitle">12 tuổi 💖 | Thế giới kẹo ngọt</p>
 
         <button class="candy-btn" onclick="raikeo()">🍬 Rải Kẹo</button>
     </div>
@@ -139,50 +162,56 @@ h1{
     <!-- VỀ TÔI -->
     <div class="section">
         <h2>💖 Về Tôi</h2>
-        <p>Xin chào! Mình là <b>Nguyễn An Nhiên</b>, 12 tuổi. Mình thích màu hồng pastel và những điều dễ thương 🍓</p>
+        <p>Xin chào! Mình là Nguyễn An Nhiên, mình thích màu hồng pastel 🍓</p>
     </div>
 
     <!-- PIANO -->
     <div class="section">
-        <h2>🎹 Mình biết chơi Piano</h2>
+        <h2>🎹 Piano</h2>
         <div class="card">
             <img src="piano.jpg">
-            <p>Mình thích chơi piano vì âm thanh rất nhẹ nhàng và giúp mình thư giãn 🎶</p>
+            <p>Mình thích chơi piano vì rất nhẹ nhàng 🎶</p>
         </div>
     </div>
 
     <!-- VIỆT NAM -->
     <div class="section">
-        <h2>🇻🇳 Mình sinh ra ở Việt Nam</h2>
+        <h2>🇻🇳 Việt Nam</h2>
+
         <div class="card">
             <img src="VietNam.jpg">
-            <p>Mình rất yêu đất nước Việt Nam xinh đẹp và con người thân thiện 💕</p>
+            <p>Mình yêu Việt Nam xinh đẹp 💖</p>
         </div>
+
+        <button class="candy-btn" onclick="rancovietnam()">
+            🇻🇳 Thả cờ Việt Nam
+        </button>
     </div>
 
     <!-- IDOL -->
     <div class="section">
-        <h2>⭐ Idol của mình</h2>
+        <h2>⭐ Idol</h2>
         <div class="card">
             <img src="Rhyder.jpg">
-            <p>Idol của mình là Rhyder, mình rất thích âm nhạc của anh ấy 🎤✨</p>
+            <p>Idol của mình là Rhyder 🎤</p>
         </div>
     </div>
 
     <div class="footer">
-        🍬 Cảm ơn bạn đã ghé thăm trang cá nhân 🍬
+        🍬 Cảm ơn bạn đã ghé thăm 🍬
     </div>
 
 </div>
 
-<!-- JAVASCRIPT KẸO RƠI -->
+<!-- JS -->
 <script>
+
 function raikeo(){
     const icons = ["🍬","🍭","🍫","🍓","🧁","🍰"];
 
     for(let i=0;i<50;i++){
         const candy = document.createElement("div");
-        candy.className = "candy";
+        candy.className="candy";
         candy.innerHTML = icons[Math.floor(Math.random()*icons.length)];
 
         candy.style.left = Math.random()*100 + "vw";
@@ -193,6 +222,22 @@ function raikeo(){
         setTimeout(()=>candy.remove(),5000);
     }
 }
+
+function rancovietnam(){
+    for(let i=0;i<60;i++){
+        const flag = document.createElement("div");
+        flag.className="flag";
+        flag.innerHTML="🇻🇳";
+
+        flag.style.left = Math.random()*100 + "vw";
+        flag.style.animationDuration = (Math.random()*2 + 2) + "s";
+
+        document.body.appendChild(flag);
+
+        setTimeout(()=>flag.remove(),5000);
+    }
+}
+
 </script>
 
 </body>
