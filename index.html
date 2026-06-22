@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn An Nhiên</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body{
+            background: linear-gradient(180deg,#ffd6e7,#fff0f6);
+            color:#7a4f5f;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:auto;
+            padding:20px;
+        }
+
+        .header{
+            background:white;
+            border-radius:30px;
+            padding:30px;
+            text-align:center;
+            box-shadow:0 8px 20px rgba(255,182,193,0.4);
+            margin-top:20px;
+        }
+
+        .avatar{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            border:8px solid #ffc1d9;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            margin-top:15px;
+            color:#ff6fa8;
+        }
+
+        .subtitle{
+            margin-top:10px;
+            font-size:18px;
+        }
+
+        .section{
+            background:white;
+            margin-top:25px;
+            border-radius:25px;
+            padding:25px;
+            box-shadow:0 8px 20px rgba(255,182,193,0.3);
+        }
+
+        .section h2{
+            color:#ff6fa8;
+            margin-bottom:15px;
+        }
+
+        .card{
+            display:flex;
+            gap:20px;
+            align-items:center;
+            flex-wrap:wrap;
+            margin-top:15px;
+        }
+
+        .card img{
+            width:250px;
+            border-radius:20px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card p{
+            flex:1;
+            font-size:18px;
+            line-height:1.7;
+        }
+
+        .footer{
+            text-align:center;
+            padding:30px;
+            color:#ff6fa8;
+            font-weight:bold;
+        }
+
+        .candy{
+            font-size:30px;
+        }
+
+        @media(max-width:768px){
+            .card{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .card img{
+                width:100%;
+                max-width:300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="candy">🍭 🍬 🍓 🍰</div>
+
+        <img src="avata.jpg" alt="Avatar" class="avatar">
+
+        <h1>Nguyễn An Nhiên</h1>
+
+        <p class="subtitle">
+            ... tuổi • Yêu thích những điều ngọt ngào và dễ thương 💖
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🌸 Về Tôi</h2>
+        <p>
+            Xin chào! Mình là <b>Nguyễn An Nhiên</b>.
+            Mình yêu thích âm nhạc, những gam màu pastel dễ thương
+            và luôn thích khám phá những điều mới mẻ trong cuộc sống.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🎹 Mình Biết Chơi Piano</h2>
+
+        <div class="card">
+            <img src="piano.jpg" alt="Piano">
+
+            <p>
+                Piano là một trong những sở thích lớn nhất của mình.
+                Mình rất thích những giai điệu nhẹ nhàng, lãng mạn
+                và cảm giác thư giãn khi ngồi bên phím đàn.
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🇻🇳 Quê Hương Của Mình</h2>
+
+        <div class="card">
+            <img src="vietnam.jpg" alt="Việt Nam">
+
+            <p>
+                Mình sinh ra tại Việt Nam 🇻🇳.
+                Mình rất tự hào về đất nước, con người,
+                văn hóa và những cảnh đẹp tuyệt vời của quê hương.
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>⭐ Idol Của Mình</h2>
+
+        <div class="card">
+            <img src="Rhyder.jpg" alt="Rhyder">
+
+            <p>
+                Idol của mình là <b>Rhyder</b>.
+                Mình yêu thích phong cách âm nhạc,
+                sự sáng tạo và năng lượng tích cực mà anh mang lại.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        🍬 Trang cá nhân của Nguyễn An Nhiên 🍬
+    </div>
+
+</div>
+
+</body>
+</html>
