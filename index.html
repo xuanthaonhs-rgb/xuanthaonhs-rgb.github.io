@@ -1,186 +1,199 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn An Nhiên</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyễn An Nhiên 💖</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: "Segoe UI", sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Comic Sans MS','Segoe UI',sans-serif;
+}
 
-        body{
-            background: linear-gradient(180deg,#ffd6e7,#fff0f6);
-            color:#7a4f5f;
-        }
+body{
+    background:linear-gradient(180deg,#ffd6e8,#fff0f6,#ffe6f2);
+    color:#7d5063;
+}
 
-        .container{
-            max-width:1000px;
-            margin:auto;
-            padding:20px;
-        }
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
 
-        .header{
-            background:white;
-            border-radius:30px;
-            padding:30px;
-            text-align:center;
-            box-shadow:0 8px 20px rgba(255,182,193,0.4);
-            margin-top:20px;
-        }
+.header{
+    background:white;
+    text-align:center;
+    padding:30px;
+    border-radius:30px;
+    margin-top:20px;
+    box-shadow:0 8px 25px rgba(255,182,193,0.35);
+}
 
-        .avatar{
-            width:180px;
-            height:180px;
-            border-radius:50%;
-            object-fit:cover;
-            border:8px solid #ffc1d9;
-            box-shadow:0 5px 15px rgba(0,0,0,0.1);
-        }
+.avatar{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #ffb6d5;
+}
 
-        h1{
-            margin-top:15px;
-            color:#ff6fa8;
-        }
+h1{
+    color:#ff69a6;
+    margin-top:15px;
+    font-size:40px;
+}
 
-        .subtitle{
-            margin-top:10px;
-            font-size:18px;
-        }
+.subtitle{
+    margin-top:10px;
+    font-size:18px;
+}
 
-        .section{
-            background:white;
-            margin-top:25px;
-            border-radius:25px;
-            padding:25px;
-            box-shadow:0 8px 20px rgba(255,182,193,0.3);
-        }
+.candy-btn{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff8fc0;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
 
-        .section h2{
-            color:#ff6fa8;
-            margin-bottom:15px;
-        }
+.candy-btn:hover{
+    background:#ff69a6;
+}
 
-        .card{
-            display:flex;
-            gap:20px;
-            align-items:center;
-            flex-wrap:wrap;
-            margin-top:15px;
-        }
+.section{
+    background:white;
+    margin-top:25px;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(255,182,193,0.25);
+}
 
-        .card img{
-            width:250px;
-            border-radius:20px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.1);
-        }
+.section h2{
+    color:#ff69a6;
+}
 
-        .card p{
-            flex:1;
-            font-size:18px;
-            line-height:1.7;
-        }
+.card{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
 
-        .footer{
-            text-align:center;
-            padding:30px;
-            color:#ff6fa8;
-            font-weight:bold;
-        }
+.card img{
+    width:260px;
+    border-radius:20px;
+}
 
-        .candy{
-            font-size:30px;
-        }
+.card p{
+    flex:1;
+    font-size:18px;
+    line-height:1.7;
+}
 
-        @media(max-width:768px){
-            .card{
-                flex-direction:column;
-                text-align:center;
-            }
+/* KẸO RƠI */
+.candy{
+    position:fixed;
+    top:-40px;
+    font-size:28px;
+    animation:fall 4s linear forwards;
+    pointer-events:none;
+}
 
-            .card img{
-                width:100%;
-                max-width:300px;
-            }
-        }
-    </style>
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+.footer{
+    text-align:center;
+    padding:25px;
+    color:#ff69a6;
+    font-weight:bold;
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
 
+    <!-- HEADER -->
     <div class="header">
-        <div class="candy">🍭 🍬 🍓 🍰</div>
-
-        <img src="avata.jpg" alt="Avatar" class="avatar">
-
+        <img src="avata.jpg" class="avatar">
         <h1>Nguyễn An Nhiên</h1>
+        <p class="subtitle">12 tuổi 💖 | Thế giới kẹo ngọt dễ thương</p>
 
-        <p class="subtitle">
-            ... tuổi • Yêu thích những điều ngọt ngào và dễ thương 💖
-        </p>
+        <button class="candy-btn" onclick="raikeo()">🍬 Rải Kẹo</button>
     </div>
 
+    <!-- VỀ TÔI -->
     <div class="section">
-        <h2>🌸 Về Tôi</h2>
-        <p>
-            Xin chào! Mình là <b>Nguyễn An Nhiên</b>.
-            Mình yêu thích âm nhạc, những gam màu pastel dễ thương
-            và luôn thích khám phá những điều mới mẻ trong cuộc sống.
-        </p>
+        <h2>💖 Về Tôi</h2>
+        <p>Xin chào! Mình là <b>Nguyễn An Nhiên</b>, 12 tuổi. Mình thích màu hồng pastel và những điều dễ thương 🍓</p>
     </div>
 
+    <!-- PIANO -->
     <div class="section">
-        <h2>🎹 Mình Biết Chơi Piano</h2>
-
+        <h2>🎹 Mình biết chơi Piano</h2>
         <div class="card">
-            <img src="piano.jpg" alt="Piano">
-
-            <p>
-                Piano là một trong những sở thích lớn nhất của mình.
-                Mình rất thích những giai điệu nhẹ nhàng, lãng mạn
-                và cảm giác thư giãn khi ngồi bên phím đàn.
-            </p>
+            <img src="piano.jpg">
+            <p>Mình thích chơi piano vì âm thanh rất nhẹ nhàng và giúp mình thư giãn 🎶</p>
         </div>
     </div>
 
+    <!-- VIỆT NAM -->
     <div class="section">
-        <h2>🇻🇳 Quê Hương Của Mình</h2>
-
+        <h2>🇻🇳 Mình sinh ra ở Việt Nam</h2>
         <div class="card">
-            <img src="vietnam.jpg" alt="Việt Nam">
-
-            <p>
-                Mình sinh ra tại Việt Nam 🇻🇳.
-                Mình rất tự hào về đất nước, con người,
-                văn hóa và những cảnh đẹp tuyệt vời của quê hương.
-            </p>
+            <img src="VietNam.jpg">
+            <p>Mình rất yêu đất nước Việt Nam xinh đẹp và con người thân thiện 💕</p>
         </div>
     </div>
 
+    <!-- IDOL -->
     <div class="section">
-        <h2>⭐ Idol Của Mình</h2>
-
+        <h2>⭐ Idol của mình</h2>
         <div class="card">
-            <img src="Rhyder.jpg" alt="Rhyder">
-
-            <p>
-                Idol của mình là <b>Rhyder</b>.
-                Mình yêu thích phong cách âm nhạc,
-                sự sáng tạo và năng lượng tích cực mà anh mang lại.
-            </p>
+            <img src="Rhyder.jpg">
+            <p>Idol của mình là Rhyder, mình rất thích âm nhạc của anh ấy 🎤✨</p>
         </div>
     </div>
 
     <div class="footer">
-        🍬 Trang cá nhân của Nguyễn An Nhiên 🍬
+        🍬 Cảm ơn bạn đã ghé thăm trang cá nhân 🍬
     </div>
 
 </div>
+
+<!-- JAVASCRIPT KẸO RƠI -->
+<script>
+function raikeo(){
+    const icons = ["🍬","🍭","🍫","🍓","🧁","🍰"];
+
+    for(let i=0;i<50;i++){
+        const candy = document.createElement("div");
+        candy.className = "candy";
+        candy.innerHTML = icons[Math.floor(Math.random()*icons.length)];
+
+        candy.style.left = Math.random()*100 + "vw";
+        candy.style.animationDuration = (Math.random()*2 + 2) + "s";
+
+        document.body.appendChild(candy);
+
+        setTimeout(()=>candy.remove(),5000);
+    }
+}
+</script>
 
 </body>
 </html>
